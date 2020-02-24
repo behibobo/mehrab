@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>F type:</strong>
+  <%= @fertilizer.f_type %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @fertilizer.amount %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @fertilizer.price %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @fertilizer.date %>
+</p>
+
+<%= link_to 'Edit', edit_fertilizer_path(@fertilizer) %> |
+<%= link_to 'Back', fertilizers_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Land type:</strong>
+  <%= @land.land_type %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @land.area %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @land.customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_land_path(@land) %> |
+<%= link_to 'Back', lands_path %>

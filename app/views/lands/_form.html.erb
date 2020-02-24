@@ -1,0 +1,31 @@
+<%= form_with(model: [@customer, land], local: true) do |form| %>
+  <% if land.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(land.errors.count, "error") %> prohibited this land from being saved:</h2>
+
+      <ul>
+        <% land.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :land_type %>
+    <%= form.number_field :land_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.number_field :area %>
+  </div>
+
+  <div class="field">
+    <%= @customer.full_name() %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

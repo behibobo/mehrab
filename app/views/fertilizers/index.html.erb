@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fertilizers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>F type</th>
+      <th>Amount</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fertilizers.each do |fertilizer| %>
+      <tr>
+        <td><%= fertilizer.f_type %></td>
+        <td><%= fertilizer.amount %></td>
+        <td><%= fertilizer.price %></td>
+        <td><%= fertilizer.date %></td>
+        <td><%= link_to 'Show', fertilizer %></td>
+        <td><%= link_to 'Edit', edit_fertilizer_path(fertilizer) %></td>
+        <td><%= link_to 'Destroy', fertilizer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fertilizer', new_fertilizer_path %>
